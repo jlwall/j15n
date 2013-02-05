@@ -1,0 +1,31 @@
+Demonstration of WE300B plate curves.
+*
+* To view results with Probe:
+*  1) Add Trace for "-I(Vp)",
+*  2) set Y-axis to 100mA.
+*
+* Compare the simulated plate curves with the
+* curves in the STC data sheet.
+*
+**********************************************
+*
+* Load model
+.INC we300b.inc
+*
+**********************************************
+* Circuit
+*
+X1    plate  grid  0   we300b
+*
+Vp    plate    0   300
+Vg     grid    0   -60
+**********************************************
+*
+.OP
+.DC Vp  0  650  10   Vg  0  -140  -20
+*
+.WIDTH OUT=80
+.OPTIONS LIMPTS=10000
+.PROBE
+.END
+
