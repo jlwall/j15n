@@ -1,0 +1,3 @@
+[submodule "libAltium"]
+	path = libAltium
+	url = git@github.com:hpd-elec/libAltium.git
